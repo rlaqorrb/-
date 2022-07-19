@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전생 했더니 8반이였던 건에 대하여</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">생명과학</h1>
+    <div class="flex-container">
+      <div class="img-container">
+        <div class="img">
+          <a href="img/무궁화.jpg" target="_blank">
+            <img src="img/무궁화.jpg" alt="">
+          </a>
+        </div>
+        <div class="description">
+          <h4>무궁화</h4>
+          <p class="des-par">
+            개화기8~9월
+            학명Hibiscus syriacus L.
+            근화(槿花)라고도 한다. 꽃말은 끈기, 섬세한 아름다움이다. 무궁화는 한자어이지만 중국 문헌에는 나타나지 않고, 다만 《산해경》에 한국에 훈화초(薰華草:무궁화)가 있다는 기록이 있다.
+            꽃은 지름 7.5cm 정도이고 보통 홍자색 계통이나 흰색·연분홍색·분홍색·다홍색·보라색·자주색·등청색·벽돌색등이있
+            꽃의 밑동에는 진한 색의 무늬가 있는 경우가 많다.
+            그리고 이 무늬에서 진한 빛깔의 맥(脈)이 밖을 향하여 방사상으로 뻗는다. 꽃은 홑꽃과 여러 형태의 겹꽃이 있다. 홑꽃의 꽃잎은 대체로 달걀을 거꾸로 세운 모양으로 5개인데 밑동에서는 서로 붙어
+            있다.
+          </p>
+          <button class="btn">더보기</button>
+          <br><br>
+          <a href="https://terms.naver.com/entry.naver?docId=1094560&cid=40942&categoryId=32713">무궁화</a>
+        </div>
+      </div>
+      <div class="img-container">
+        <div class="img">
+          <a href="img/아벨리아.jpg" target="_blank">
+            <img src="img/아벨리아.jpg" alt="">
+          </a>
+        </div>
+        <div class="description">
+          <h4>아벨리아</h4>
+          <p class="des-par">
+            개화시기7월~9월
+            학명Abelia grandiflora (André) Rehd.
+            높이 1.5∼2m 정도 자라는 반상록성 관목으로 잎은 대생하며 난형이다. 잎 길이는 2∼4㎝, 폭은 1∼2㎝로 광택이 있다. 꽃은 정생하는데 원추화서로 약 2㎝ 정도 길고 꽃잎 끝은 5갈래로
+            갈라져 있으며 향기가 난다. 꽃은 흰색을 띤 분홍색이 나고 7∼9월에 개화한다. 정원이나 울타리용, 절화용으로 쓰인다. 원산지는 북반구에 약 30종이 나며 한국에도 7종이 난다.
+          </p>
+          <button class="btn">더보기</button>
+          <br><br>
+          <a href="">아벨리아</a>
+        </div>
+      </div>
+      <div class="img-container">
+        <div class="img">
+          <a href="img/눈보라(백란).jpg" target="_blank">
+            <img src="img/눈보라(백란).jpg" alt="">
+          </a>
+        </div>
+        <div class="description">
+          <h4>눈보라(백란)</h4>
+          <p class="des-par">
+            학명: Hibiscus syriacus L.
+            개화:7~10월
+            전국에 널리 분포하는 재래종에서 선발, 1979년 서울농대에서 명명. 꽃모양은 III-b 형의 겹꽃으로 바탕 꽃잎이 갈라져 작고 속꽃잎도 뒤로 오므라지며 불규칙하게 솟아 있다.
+          </p>
+          <button class="btn">더보기</button>
+          <br><br>
+          <a href="">눈보라(백란)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Mobile Size UI -->
+  <div class="M-container">
+    <h4>생명과학</h4>
+    <div class="M-img-container">
+      <div class="M-img">
+        <img src="img/무궁화.jpg" alt="">
+      </div>
+      <div class="M-img">
+        <img src="img/아벨리아.jpg" alt="">
+      </div>
+      <div class="M-img">
+        <img src="img/눈보라(백란).jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let cg = 0;
+    for(let i = 0; i < 3; i++){
+      console.log('for : ' + i);
+      $('.btn').eq(i).on('click', function () {
+        $('.des-par').eq(i).addClass('des-show');
+        window.scrollTo({ left: 0, top: 130, behavior: "smooth" });
+        $('.btn').eq(i).html('숨기기');
+        cg = 1;
+        console.log('done : ' + i);
+        $('.btn').eq(i).hide();
+      })
+    }
+
+    // $('.btn').eq(0).on('click', function(){
+    //   if(cg == 1){
+    //     $('.des-par').eq(0).removeClass('des-show');
+    //     window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    //     $('.btn').eq(0).html('더보기');
+    //   }
+    // })
+    // for(let i = 0; i < 3; i++){
+    //   $('.des-show').eq(i).on('click', function(){
+    //     $('.des-par').eq(i).removeClass('des-show');
+    //       window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    //   })
+    // }
+    
+    // for(let i = 0; i < 3; i++){
+    //   let cg = 0;
+    //   $('.btn').eq(i).on('click', function(){
+    //     console.log(i);
+    //     console.log(cg);
+    //     if(cg = 0){
+    //       console.log(i);
+    //       $('.btn').eq(i).html('숨기기');
+    //     } else {
+    //       $('.btn').eq(i).html('더보기');
+    //     }
+    //   })
+    // }
+
+    // for(let i = 0; i < 3; i++){
+    //   $('.btn').eq(i).on('click', function () {
+    //     $('.des-par').eq(i).removeClass('des-show');
+    //     window.scrollTo({ left: 0, top: 130, behavior: "smooth" });
+    //     $('.btn').eq(i).html('더보기');
+    //   })
+    // }
+  </script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>

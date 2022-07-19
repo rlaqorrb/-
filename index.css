@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+body {
+  background-image: url(img/layered-waves-haikei\ \(1\).svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.M-container {
+  display: none;
+}
+
+.container {
+  width: 98vw;
+  min-height: 100vh;
+}
+.container .title {
+  text-align: center;
+  color: white;
+  padding: 30px;
+}
+.container .flex-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+.container .flex-container .img-container {
+  width: 20vw;
+  color: white;
+}
+.container .flex-container .img-container .img {
+  border-radius: 20px;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container .flex-container .img-container .img img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+.container .flex-container .img-container .img img:hover {
+  width: 300px;
+}
+.container .flex-container .img-container .description {
+  margin-top: 50px;
+}
+.container .flex-container .img-container .description .des-par {
+  height: 80px;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.container .flex-container .img-container .description .btn {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.des-show {
+  height: auto !important;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: none;
+  }
+  body, html {
+    background: white;
+    color: black;
+  }
+  .M-container {
+    display: block;
+  }
+  .M-container .M-img-container {
+    width: 300vw;
+  }
+  .M-container .M-img-container .M-img {
+    display: inline-block;
+    width: 99vw;
+    text-align: center;
+  }
+  .M-container .M-img-container .M-img img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 350px;
+  }
+}/*# sourceMappingURL=index.css.map */
