@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전생 했더니 8반이였던 건에 대하여</title>
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="무궁화.css">
+    <script src="https://kit.fontawesome.com/6e4abe1f96.js" crossorigin="anonymous"></script>
+  <!-- CSS only -->
+</head>
+
+<body>
+  <nav>
+    <div class="nav-containr">
+      <div class="right">
+        <div class="logo">
+          <p>VoidString</p>
+        </div>
+      </div>
+
+      <div class="left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="무궁화.html" class="now">무궁화</a></li>
+          <li><a href="아벨리아.html">아벨리아</a></li>
+          <li><a href="눈보라.html">눈보라</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="M-nav">
+    <div class="M-nav-container">
+      <div class="nav-containr">
+        <div class="right">
+          <div class="logo">
+            <p>VoidString</p>
+          </div>
+          <div class="open-nav">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <div class="left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="무궁화.html" class="now">무궁화</a></li>
+            <li><a href="아벨리아.html">아벨리아</a></li>
+            <li><a href="눈보라.html">눈보라</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('.open-nav').on('click', function(){
+      $('.left').toggleClass('left-show');
+      $('.M-nav').toggleClass('M-nav-show');
+    })
+  </script>
+
+  <div class="container">
+    <h1 class="title">무궁화</h1>
+    <small></small>
+    <div class="flex-container">
+      <div class="img-container">
+        <div class="img">
+          <a href="img/무궁화.jpg" target="_blank">
+            <img src="img/무궁화.jpg" alt="">
+          </a>
+        </div>
+        <div class="description">
+          <h4>무궁화</h4>
+          <p class="des-par">
+            개화기8~9월
+            학명Hibiscus syriacus L.
+            근화(槿花)라고도 한다. 꽃말은 끈기, 섬세한 아름다움이다. 무궁화는 한자어이지만 중국 문헌에는 나타나지 않고, 다만 《산해경》에 한국에 훈화초(薰華草:무궁화)가 있다는 기록이 있다.
+            꽃은 지름 7.5cm 정도이고 보통 홍자색 계통이나 흰색·연분홍색·분홍색·다홍색·보라색·자주색·등청색·벽돌색등이있
+            꽃의 밑동에는 진한 색의 무늬가 있는 경우가 많다.
+            그리고 이 무늬에서 진한 빛깔의 맥(脈)이 밖을 향하여 방사상으로 뻗는다. 꽃은 홑꽃과 여러 형태의 겹꽃이 있다. 홑꽃의 꽃잎은 대체로 달걀을 거꾸로 세운 모양으로 5개인데 밑동에서는 서로 붙어
+            있다.
+          </p>
+          <button class="btn">더보기</button>
+          <br><br>
+          <a href="https://terms.naver.com/entry.naver?docId=1094560&cid=40942&categoryId=32713" target="_blank" >지식백과 : <span style="color: #33a3ee; text-decoration: underline;">무궁화</span></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <script>
+    let cg = 0;
+    for(let i = 0; i < 3; i++){
+      console.log('for : ' + i);
+      $('.btn').eq(i).on('click', function () {
+        $('.des-par').eq(i).addClass('des-show');
+        window.scrollTo({ left: 0, top: 130, behavior: "smooth" });
+        $('.btn').eq(i).html('숨기기');
+        cg = 1;
+        console.log('done : ' + i);
+        $('.btn').eq(i).hide();
+      })
+    }
+
+    // $('.btn').eq(0).on('click', function(){
+    //   if(cg == 1){
+    //     $('.des-par').eq(0).removeClass('des-show');
+    //     window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    //     $('.btn').eq(0).html('더보기');
+    //   }
+    // })
+    // for(let i = 0; i < 3; i++){
+    //   $('.des-show').eq(i).on('click', function(){
+    //     $('.des-par').eq(i).removeClass('des-show');
+    //       window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    //   })
+    // }
+    
+    // for(let i = 0; i < 3; i++){
+    //   let cg = 0;
+    //   $('.btn').eq(i).on('click', function(){
+    //     console.log(i);
+    //     console.log(cg);
+    //     if(cg = 0){
+    //       console.log(i);
+    //       $('.btn').eq(i).html('숨기기');
+    //     } else {
+    //       $('.btn').eq(i).html('더보기');
+    //     }
+    //   })
+    // }
+
+    // for(let i = 0; i < 3; i++){
+    //   $('.btn').eq(i).on('click', function () {
+    //     $('.des-par').eq(i).removeClass('des-show');
+    //     window.scrollTo({ left: 0, top: 130, behavior: "smooth" });
+    //     $('.btn').eq(i).html('더보기');
+    //   })
+    // }
+  </script>
+  <!-- JavaScript Bundle with Popper -->
+</body>
+
+</html>

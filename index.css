@@ -15,7 +15,7 @@ a:visited {
 }
 
 body {
-  background-image: url(img/layered-waves-haikei\ \(1\).svg);
+  background-color: #140021;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -42,6 +42,8 @@ body {
 .container .flex-container .img-container {
   width: 20vw;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 .container .flex-container .img-container .img {
   border-radius: 20px;
@@ -78,34 +80,69 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
+.container .bottom {
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(201, 199, 199);
+  width: 100%;
+  height: 10vh;
+}
+.container .bottom .maker {
+  padding: 10px;
+}
+.container .bottom .maker p {
+  text-align: center;
+  color: #140021;
+  font-weight: 900;
+}
 
 .des-show {
   height: auto !important;
 }
 
-@media screen and (max-width: 600px) {
-  .container {
-    display: none;
+@media screen and (max-width: 1000px) {
+  body {
+    background-image: none;
+    background-color: #140021;
   }
-  body, html {
-    background: white;
-    color: black;
+  .container .flex-container {
+    flex-direction: column;
+    padding: 10px;
   }
-  .M-container {
-    display: block;
+  .container .flex-container .img-container {
+    width: 96vw;
   }
-  .M-container .M-img-container {
-    width: 300vw;
+  .container .flex-container .img-container .img {
+    box-sizing: content-box;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
   }
-  .M-container .M-img-container .M-img {
-    display: inline-block;
-    width: 99vw;
+  .container .flex-container .img-container .img img {
+    width: 150px;
+  }
+  .container .flex-container .img-container .description {
+    margin: 15px 10px;
+    margin-bottom: 50px;
+  }
+  .container .flex-container .img-container .description h4 {
     text-align: center;
+    font-size: 26px;
   }
-  .M-container .M-img-container .M-img img {
-    display: block;
+  .container .flex-container .img-container .description p {
+    text-align: center;
+    width: 80%;
     margin-right: auto;
     margin-left: auto;
-    width: 350px;
+  }
+  .container .flex-container .img-container .description button {
+    display: none;
+  }
+  .container .flex-container .img-container .description .des-par {
+    height: initial;
+  }
+  .container .flex-container .img-container .description a {
+    text-align: center;
+    display: block;
   }
 }/*# sourceMappingURL=index.css.map */

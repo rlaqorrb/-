@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>전생 했더니 8반이였던 건에 대하여</title>
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="무궁화.css">
+    <script src="https://kit.fontawesome.com/6e4abe1f96.js" crossorigin="anonymous"></script>
+  <!-- CSS only -->
+</head>
+
+<body>
+  <nav>
+    <div class="nav-containr">
+      <div class="right">
+        <div class="logo">
+          <p>VoidString</p>
+        </div>
+      </div>
+      <div class="middle">
+
+      </div>
+      <div class="left">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="무궁화.html">무궁화</a></li>
+          <li><a href="아벨리아.html">아벨리아</a></li>
+          <li><a href="눈보라.html" class="now">눈보라</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="M-nav">
+    <div class="M-nav-container">
+      <div class="nav-containr">
+        <div class="right">
+          <div class="logo">
+            <p>VoidString</p>
+          </div>
+          <div class="open-nav">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <div class="left">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="무궁화.html">무궁화</a></li>
+            <li><a href="아벨리아.html">아벨리아</a></li>
+            <li><a href="눈보라.html" class="now">눈보라</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('.open-nav').on('click', function(){
+      $('.left').toggleClass('left-show');
+      $('.M-nav').toggleClass('M-nav-show');
+    })
+  </script>
+
+
+  <div class="container">
+    <h1 class="title">눈보라(백란)</h1>
+    <small></small>
+    <div class="flex-container">
+      <div class="img-container">
+        <div class="img">
+          <a href="img/눈보라(백란).jpg" target="_blank">
+            <img src="img/눈보라(백란).jpg" alt="">
+          </a>
+        </div>
+        <div class="description">
+          <h4>눈보라(백란)</h4>
+          <p class="des-par">
+            학명: Hibiscus syriacus L.
+            개화:7~10월
+            전국에 널리 분포하는 재래종에서 선발, 1979년 서울농대에서 명명. 꽃모양은 III-b 형의 겹꽃으로 바탕 꽃잎이 갈라져 작고 속꽃잎도 뒤로 오므라지며 불규칙하게 솟아 있다.
+          </p>
+          <button class="btn">더보기</button>
+          <br><br>
+          <a href="https://terms.naver.com/entry.naver?docId=1793009&cid=49391&categoryId=49391#TABLE_OF_CONTENT1" target="_blank" >지식백과 : <span style="color: #33a3ee; text-decoration: underline;">눈보라(백란)</span></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <script>
+    let cg = 0;
+    for(let i = 0; i < 3; i++){
+      console.log('for : ' + i);
+      $('.btn').eq(i).on('click', function () {
+        $('.des-par').eq(i).addClass('des-show');
+        window.scrollTo({ left: 0, top: 130, behavior: "smooth" });
+        $('.btn').eq(i).html('숨기기');
+        cg = 1;
+        console.log('done : ' + i);
+        $('.btn').eq(i).hide();
+      })
+    }
+
+    // $('.btn').eq(0).on('click', function(){
+    //   if(cg == 1){
+    //     $('.des-par').eq(0).removeClass('des-show');
+    //     window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    //     $('.btn').eq(0).html('더보기');
+    //   }
+    // })
+    // for(let i = 0; i < 3; i++){
+    //   $('.des-show').eq(i).on('click', function(){
+    //     $('.des-par').eq(i).removeClass('des-show');
+    //       window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    //   })
+    // }
+    
+    // for(let i = 0; i < 3; i++){
+    //   let cg = 0;
+    //   $('.btn').eq(i).on('click', function(){
+    //     console.log(i);
+    //     console.log(cg);
+    //     if(cg = 0){
+    //       console.log(i);
+    //       $('.btn').eq(i).html('숨기기');
+    //     } else {
+    //       $('.btn').eq(i).html('더보기');
+    //     }
+    //   })
+    // }
+
+    // for(let i = 0; i < 3; i++){
+    //   $('.btn').eq(i).on('click', function () {
+    //     $('.des-par').eq(i).removeClass('des-show');
+    //     window.scrollTo({ left: 0, top: 130, behavior: "smooth" });
+    //     $('.btn').eq(i).html('더보기');
+    //   })
+    // }
+  </script>
+  <!-- JavaScript Bundle with Popper -->
+</body>
+
+</html>
